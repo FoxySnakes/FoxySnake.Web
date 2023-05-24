@@ -1,0 +1,20 @@
+<div class="home-container">
+  <div class="default-container home">
+    <div class="text-information">
+      <h1>Bienvenue sur mon site perso !</h1>
+      <hr />
+      <p>Ce site me sert à tester plein de fonctionnalités que je découvre au fur et à mesure de mon apprentissage. La plupart des fonctionnalités sont disponibles et en accès-libre.</p>
+      <p>Si vous avez des questions ou des propositions, n'hésitez pas à <a routerLink="contact">me contacter</a></p>
+      <hr *ngIf="displayDependsOnWidth()"/>
+    </div>
+    <div class="profil">
+      <img src="../../../assets/pictures/profil-picture-modified.png" id="profil-logo" />
+      <div class="profil-information">
+        <h2>FoxySnake</h2>
+        <p>20 ans</p>
+        <p>Apprenti Developpeur</p>
+      </div>
+    </div>
+  </div>
+
+</div>

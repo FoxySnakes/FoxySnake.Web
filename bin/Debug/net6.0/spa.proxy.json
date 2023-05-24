@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:44481",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\FoxySnake.Web\\FoxySnake.Web\\ClientApp\\",
+"MaxTimeoutInSeconds": "120"
+}
+}

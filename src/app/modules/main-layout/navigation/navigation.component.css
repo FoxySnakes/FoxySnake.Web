@@ -1,0 +1,193 @@
+nav {
+  position: relative;
+  top: 0;
+  justify-content: center;
+  display: flex;
+  height: var(--nav-height);
+  width: 100%;
+  background: var(--first-backgroundcolor);
+  z-index: 10;
+  opacity: 1;
+}
+
+a.logo {
+  font-size: 22px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: var(--nav-height);
+  color: white
+}
+
+.checkbtn {
+  display: block;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: var(--nav-height);
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+#navbar {
+  position: fixed;
+  top: var(--nav-height);
+  left: -100%;
+  width: 80%;
+  height: calc(100vh - 50px);
+  transition: all 0.5s;
+  max-width: 350px
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  background: var(--first-backgroundcolor);
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.category > p, .category-link > li, .category > a {
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+  border-top: solid 1.5px rgba(255,255,255,0.1);
+  border-bottom: solid 1.5px #151515;
+  cursor: pointer;
+  color: white;
+}
+
+.category-name > label, .category > a {
+  display: block;
+  cursor: pointer;
+  padding-left: 15px;
+}
+
+  .category-name > label:hover, .category-name > label.active, .category-link > li > a:hover, .category > a:hover , .category > a.active{
+    color: var(--second-color);
+    background-color: var(--second-backgroundcolor)
+  }
+
+.chevron {
+  line-height: 40px;
+  margin-right: 20px;
+  position: relative;
+  float: right;
+  transition: transform 0.5s;
+}
+
+.category-link > li {
+  font-size: 13px;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden
+}
+
+  .category-link > li > a {
+    display: block;
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 30px;
+    overflow: hidden
+  }
+
+.category {
+  max-width: 100%;
+  height: 40px;
+  transition: all 0.5s ease-in-out;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+}
+
+
+.category-link {
+  display: none;
+}
+*.category-link > li {
+  background: var(--first-backgroundcolor);
+}
+
+
+.category > p > input:checked ~ label > i {
+  transform: rotate(90deg);
+}
+
+
+
+
+/* Media Queries */
+@media (min-width: 1024px) {
+  .checkbtn{
+    display: none;
+  }
+  .chevron {
+    line-height: var(--nav-height);
+    transform: rotate(90deg);
+    padding: 0 10px;
+  }
+  nav {
+    justify-content: center;
+
+  }
+  #navbar {
+    position: initial;
+    height: 100%;
+    width : 100%
+  }
+
+  .categories {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    overflow: initial;
+  }
+
+  .category {
+    min-width: 125px;
+    text-align: center;
+    height: 100%;
+  }
+  .category-name > label{
+    padding: 0 10px;
+  }
+  .category-link{
+    width: 100%
+  }
+
+    .category-link > li, .category > a {
+      border: none;
+      height: 100%;
+      padding: 0
+    }
+      .category-link > li > a {
+        text-overflow: ellipsis;
+        text-align: left;
+        padding: 0 10px;
+      }
+  .category > p {
+    border: none;
+    height: var(--nav-height)
+  }
+  .category-name > label, .category > a {
+    height: 100%;
+    line-height: var(--nav-height);
+    font-size: 17px;
+    text-align: center
+  }
+
+  a.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    width: max-content;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  .category-name > label:hover, .category-name > label.active, .category-link > li > a:hover, .category > a:hover, .category > a.active {
+    border-bottom: solid 1.5px var(--second-color);
+    transition: all 0.5s;
+  }
+}

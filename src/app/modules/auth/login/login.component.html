@@ -1,0 +1,77 @@
+<div class="login-container">
+  <div class="default-container">
+    <h1>Connectez-vous</h1>
+    <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Nom d'utilisateur</mat-label>
+        <input matInput formControlName="username" required [ngStyle]="{'border-color':formLogin.controls.username.valid?'green':'white'}" />
+        <mat-error>Nom d'utilisateur requis</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Mot de passe</mat-label>
+        <input type="password" matInput formControlName="password" required [ngStyle]="{'border-color':formLogin.controls.password.valid?'green':'white'}" />
+        <mat-error>Mot de passe requis</mat-error>
+      </mat-form-field>
+      <button [disabled]="!formLogin.valid">Se connecter</button>
+    </form>
+  </div>
+</div>
+<!--<div class="bg-dark p-5 rounded-xl">
+  <h2 *ngIf="!sent" class=" col-12 text-white f-size-24px">Envoyez-nous un message</h2>
+  <div *ngIf="errors">
+    <div class="alert alert-danger" *ngFor="let error of errors">
+      <strong>error</strong>
+    </div>
+  </div>
+  <div *ngIf="sent" class="container text-white">
+    <p class="col-12 text-center font-weight-bolder">Merci, nous répondrons à votre message dans les plus bref délais</p>
+  </div>
+
+
+  <div class="col-12 px-0">
+    <div class="row margin-lr-0 justify-content-center mb-3" id="ContactForm">
+
+      <form *ngIf="!sent" [formGroup]="form" class="row col-12" (ngSubmit)="onSubmit()">
+
+        <mat-form-field class="form-group col-12 col-lg-3 text-white " appearance="legacy">
+          <mat-label class="text-white font-italic">Prénom</mat-label>
+          <input matInput formControlName="firstName" required>
+          <mat-error>Ce champs est requis</mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="form-group col-12 col-lg-3 text-white " appearance="legacy">
+          <mat-label class="text-white font-italic">Nom</mat-label>
+          <input matInput formControlName="lastName" required>
+          <mat-error>Ce champs est requis</mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="form-group col-12 col-lg-6 text-white " appearance="legacy">
+          <mat-label class="text-white font-italic">E-mail</mat-label>
+          <input matInput formControlName="email" required>
+          <mat-error *ngIf="form.controls['email'].errors?.['required']">Ce champs est requis</mat-error>
+          <mat-error *ngIf="form.controls['email'].errors?.['email']">Adresse email invalide</mat-error>
+        </mat-form-field>
+        <br>
+
+        <div class="col-12 textarea">
+          <mat-form-field class="form-group col-12 px-0 py-0 text-white " appearance="legacy">
+            <mat-label class="text-white font-italic">Ma question</mat-label>
+            <textarea matInput formControlName="message" rows="10" required></textarea>
+            <mat-error>Ce champs est requis</mat-error>
+          </mat-form-field>
+        </div>
+        <br />
+        <div class="col-12">
+          <button [disabled]="!form.valid || sending"
+                  class="btn-theme btn-theme-second px-5">
+
+            <span class="font-weight-bold"> !sending ? 'Envoyer' : 'En cours...' </span>
+
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>-->

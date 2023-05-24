@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: montserrat;
+}
+
+:root {
+  --first-color: #222629;
+  --second-color: #EE4A00;
+  --third-color: #AA3714;
+  --fourth-color: #474B4F;
+  --fifth-color: #6B6E70;
+  --first-backgroundcolor: #222629;
+  --second-backgroundcolor: #2A2F33;
+  --nav-height: 50px
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url('assets/police/Montserrat/static/Montserrat-Medium.ttf')
+}
+
+a {
+  cursor: pointer;
+}
+
+.opaciting {
+  opacity: 0.5;
+  transition: opacity 0.5s
+}
+
+.d-none {
+  display: none;
+}
+
+.default-container {
+  background: var(--first-backgroundcolor);
+  border-radius: 10px;
+  padding: 20px 25px;
+}

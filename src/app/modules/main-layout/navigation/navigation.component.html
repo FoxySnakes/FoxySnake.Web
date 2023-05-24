@@ -1,0 +1,30 @@
+<nav>
+  <input class="d-none" type="checkbox" id="check" (change)="onCheckboxChange($event)" name="navbarcheck" />
+  <label for="check" class="checkbtn">
+    <i class="fa-solid fa-bars"></i>
+  </label>
+  <a class="logo" routerLink="home">FoxySnake</a>
+  <div id="navbar" name="navbar">
+    <div class="categories">
+      <div class="category" (change)="dropDown($event, 1)" name="category">
+        <p class="category-name" name="category-name"><input class="d-none" type="checkbox" id="procedures" name="category-checkbox" /><label class="" name="category-label" for="procedures">Procédures<i class="chevron fa-solid fa-chevron-right"></i></label></p>
+        <ul class="category-link" name="category-link">
+          <li><a>Windows Client</a></li>
+          <li><a>Serveur Web</a></li>
+        </ul>
+      </div>
+      <div class="category" (change)="dropDown($event, 5)" name="category">
+        <a class="category-name" id="contact" routerLink="contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Template -->
+<!--<div class="category" (change)="dropDown($event, 1)" name="category">
+  <p class="category-name" name="category-name"><input class="d-none" type="checkbox" id="procedures" name="category-checkbox" /><label class="" name="category-label" for="procedures">Procédures<i class="chevron fa-solid fa-chevron-right"></i></label></p>
+  <ul class="category-link" name="category-link">
+    <li><a>Windows Client</a></li>
+    <li><a>Serveur Web</a></li>
+  </ul>
+</div>-->
